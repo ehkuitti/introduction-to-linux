@@ -6,6 +6,44 @@ A)
 
 ![RDP-työpöytä](https://gyazo.com/d25f025e8e62d989253ce9f89dd757db)
 
-![SSH] (https://i.gyazo.com/50e8fdf1f3e3c22d2a94b75286459939.png)
+![SSH](https://i.gyazo.com/50e8fdf1f3e3c22d2a94b75286459939.png)
 
-<img src="https://i.gyazo.com/50e8fdf1f3e3c22d2a94b75286459939.png" alt="kuva">
+B)
+
+![Mint](https://www.linuxmint.com/pictures/screenshots/ulyssa/cinnamon.png)
+
+Valitsin tavallisen USB3-muistitikun, joka minulta sattui löytymään. 4 GT tallennustila osoittautui tarpeeksi suureksi eikä ongelmia tullut. Valitsin distrokseni jo aiemmin hyväksi toteamani Linux Mintin. Tämä lähinnä siksi, että Mintin samankaltaisuus Windowsin kanssa tekee siitä helpottan käytettävän, matalalla oppimiskäyrällä. 
+
+![Tikku](https://cdn.s-cloud.fi/v1/product/ean/0619659102135_kuva1.jpg?width=435&height=400)
+
+Aluksi latasin ISO-tiedoston linuxmint.com:ista. Päädyin lataamaan sen torrenttina siksi, että tämä oli todella nopea tapa ladata tiedosto. Avasin qBittorrent-torrentohjelman, ja se latasi Linux Mint 20:n ISO-levykuvan. Tämän jälkeen latasin balonaEtcher -"tikunteko-ohjelman" (https://www.balena.io/etcher/), joka on todella helppokäyttöinen tikun tekoon. Se vain avataan, etsitään tiedosto koneelta, valitaan tikku ja painetaan tee, ja ohjelmahan teki. Ohjelma purkaa ISO:n asennustiedostot ja kopioi ne tikulle. Tämän lisäksi, jotta tietokoneen UEFI osaisi tunnistaa tikulla olevan Linuxin käynnistettävänä, se lisää tikulle merkinnän siitä, että siltä voi käynnistää käyttöjärjestelmän (bootable drive). Tämä mahdollistaa sen, että tietokone osaa lukea tikkua niin kuin sitä tarvitsee lukea tikulta asennuksen aloittaimsta varten. Lopuksi ohjelma vielä varmistaa, että kaikki tarvittavat tiedostot on kopioitu eikä virheitä tapahtunut. 
+
+![USB](https://gyazo.com/a35dbc71852a4cdb9060aa1bb2bc6774)
+
+Kun tikku oli valmis, käynnistin tietokoneen uudelleen painamalla Käynnistä uudelleen Windowsin käynnistä-valikosta shift pohjassa. Tämä avaa valikon, jossa yhtenä vaihtoehtona on UEFI (BIOS). Uefista etsin sitten boot orderin ja sieltä laitoin muistitikun ensimmäiseksi. Valitsin "Exit saving changes" ja tietokone käynnistyi uudelleen ja voilà!, järjestelmä käynnistyi kuin käynnistyikin tikulta Minttiin. Järjestelmää ei siis ole asennettu nyt ollenkaan tietokoneen kovalevylle, vaan sitä ajetaan tikulta. Tikkuun olisi kuitenkin mahdollista tehdä joillain ohjelmilla, kuten rufuksella, ns. pysyvä tallennustila, mikä tarkoittaa sitä, että tikun omaan Linuxiin voisi asentaa ohjelmia. Tätä Etcher ei kuitenkaan osaa, joten tätä en päässyt kokeilemaan. Asennus onnistui hyvin ja sain Linuxissa auki mm. Firefox-selaimen.
+
+[https://github.com/ehkuitti/johdatus-linuxiin/blob/master/images/MintLenovo.jpg]
+
+C)
+
+Päätin mennä askeleen pidemmälle ja asentaa Linuxin kovalevylle Windowsin rinnalle. Koululäppärissäni on 500 GT SSD, joten en todellakaan tarvitse kaikkea tuota tilaa Windowsille. Niinpä annoin Linuxille 200 gigaa tilaa. Käynnistin asennuksen klikkaamalla Install Linux Mint ja tämän jälkeen vaihdoin kieleksi suomen. Painoin seuraava ja jatkoin matkaa. Seuraavaksi tuli lukuisia kysymyksiä: haluatko yhdistää wifiin, mitä näppäimistön kieltä käytetään ja asennetaanko koodekkeja. Yhdistin wifiin, otin suomen ja asensennutin koodekit. Tämän jälkeen tilanne meni hieman monimutkaisemmaksi. Olin jo valmiiksi pienentänyt Windowsille antamaani NTFS-partitionia 200 gigatavulla, sillä näin asennus on hieman helpompaa seuraavassa vaiheessa. Olin alunperinkin suunnitellut asentavani Linuxin, en vain käyttääkseni sitä tikulta. Siispä seuraavassa vaiheessa oli 3 vaihtoehtoa: Tyhjennä levy ja asenna Mint, asenna Mint Windowsin rinnalle tai Jokin muu. Valitsin jokin muu, sillä tiesin jo valmiiksi, minkälaisen asennuksen haluan. Tein tyhjään tilaan aluksi 16 GB swap-partitionin. Swap-partitionilla tarkoitetaan levyosioita, jota käytetään RAMin jatkeena siinä vaiheessa, kun tarvittaisiin muistiin lisää tavaraa RAMin ollessa täynnä. Tällöin tietokone ikään kuin käyttää kovalevyä RAMina, jotta tietoja ei menetettäisi muistivajeen takia. Muistin vanhastaan, että hyvä periaate on tehdä tuplaten oman RAM-määrän edestä SWAPpia, sillä tällöin swappiin mahtuu saman verran dataa kuin varsinaiseen RAMiin. Koska minulla on 8 gt ramia, päädyin 16 gigatavun swappiin.
+
+Swapin tehtyäni jäljellä oli vielä levyosio (partitioni), jonne käyttöjärjestelmä asennetaan. Niinpä tein jäljellä olevasta vapaasta tilasta (184 GT) uuden partitionin. Koska Linux ei tue Windows-muotoisille levyille asentamista (NTFS), tein uudesta levystä ext4:n. Tämä on Mintin (ja Linuxin ylipäätään) tukema (ja oletusasetuksilla pyörivä) tiedostojärjestelmä, joka mahdollistaa tehokkaan käyttöoikeuksien hallinnan. Linuxissa, kuten sen "ukissa" UNIXissa, käyttäjien käyttöoikeudet ovat keskiössä. Siispä esimerkiksi tavallinen käyttäjä ei voi asentaa ohjelmia, vaan se joutuu erikseen pyytämään root- eli pääkäyttäjän oikeuksia. Tämä pyyntö tehdään kirjoittamalla salasana sellaisen operaation yhteydessä, jotka vaativat korkeamman tason oikeuksia (privileges). Tein ext4:stä ensisijaisen levytyypiltään eli se on ns. pääpartitioni eli toimii itsessään eikä ole kytketty muihin partitioihin, kuten RAIDissä, jossa useamman levyt partitionit yhdistetään yhdeksi "virtuaalilevyksi". Tämän jälkeen valitsin vielä bootloaderille asennuskohteeksi koneen sisäisen kovalevyn. Tämä on tärkeää. Bootloader on alkulatausohjelma, jonka tehtävänä on ladata käynnistettävä käyttöjärjestelmä. Tämän on sijaittava tietokoneen ensisijaisella sisäisellä kovalevyllä, jotta se osaa ladata bootloaderin, joka sitten puolestaan käyttöjärjestelmän. Itse käyttöjärjestelmän ei Linuxin tapauksessa tarvitse kuitenkaan olla koneen omalla levyllä, vaan se voitaisiin yhtä hyvin asentaa myös ulkoiselle levylle. Tällöin bootloader vain lataisi sen sieltä. Kuitenkin on myös huomioitava, että ulkoista levyä käytettäessä suorituskyky (performance) kärsii USB-väylän tiedonsiirtopuutteiden rajoituksellisuuden takia, verrattuna esimerkiksi SATAa:n tai varsinkin M.2:een, joita sisäiset kovalevyt käyttävät.
+
+Asenna. Asennus lähti käyntiin ja tietokone alkoi kyselemään lisää kysymyksiä. Aluksi se kysyi, missä asun. Tämä siksi, että se tietäisi asettaa kellonajan oikein. Tämän jälkeen se kysyi vielä nimeäni, käyttäjänimeäni, tietokoneen nimeää kuin myös salasanaa. Linuxissa järjestelmänvalvoja ei voi olla salasanaa vailla, kuten Windowsissa, joten salasana on tässä kohtaa pakollinen, sillä asennusohjelma tekee järjestelmänvalvojan tilin (myöhemmin voi tehdä uuden "tavallisen käyttäjän"). Vielä lopuksi asennusohjelma kysyi, haluanko käynnistää tietokoneen automaattisesti ilman salasaa, vaiko antaa salasanan. Mikäli olisin valinnut jälkimmäisen, olisi levyn salaaminen myös ollut mahdollista. Tätä en kuitenkaan tehnyt, koska on mielestäni paljon kätevämpää käynnistää antamatta salasanaa. 
+
+Asennus valmistui. Tietokone käynnistyi uudelleen ja pyysi poistamaan muistitikun. Sen tein ja kappas vain! Tietokoneen uudellenkäynnistyessä GRUB-bootloader toivotti minut tervetulleeksi ja heti listan ensimmäisenä oli Mint. GRUB valitsi sen automaattisesti ja tietokone käynnistyi Mintin käynnistysäänen fanfaarit soiden. Työpöydälle päästyäni avasin Update Managerin, jossa valitsin peilipalvelimeksi ruotsalaisen (pääpalvelin) ja suomalaisen (päivityspalvelin) palvelimen. Tämä mahdollsitaa sen, että ohjelmat ja päivitykset latautuvat moninkertaisesti nopeammin, sillä oletusasetuksilla Mint lataa päivitykset Yhdysvalloista, josta Mint on kotoisinkin. Tämän jälkeen asensin päivitykset update managerilla. Käynnistin tietokoneen sitten uudelleen ja asensin vielä virallisen näytönohjaimen ajurin. Kaikki toimi hyvin ja olin tyytyväinen, että sain Mintin asennettua. 
+
+Ohessa vielä muutama kuva lopullisesta asennuksesta:
+
+Työpöytä
+
+![Desktop](https://github.com/ehkuitti/johdatus-linuxiin/blob/master/images/Desktop.png)
+
+Firefox-selain auki
+
+![Firefox](https://github.com/ehkuitti/johdatus-linuxiin/blob/master/images/Firefox.png)
+
+Gedit-tekstieditori ja Shotwell-kuvankatseluohjelma
+
+![Gedit](https://github.com/ehkuitti/johdatus-linuxiin/blob/master/images/Gedit.png)
