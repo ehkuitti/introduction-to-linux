@@ -70,5 +70,21 @@ else
 	
 fi
 
-d) 
+d) #!/bin/bash
 
+echo Tervetuloa arvauspeliin! Yritä arvata oikea numero kirjoittamalla jokin numero!
+
+read varnum
+
+n=7
+
+if [[ $varnum == "$n" ]]
+	then
+		echo Numerosi meni oikein, onnittelut!
+elif [[ $varnum -gt "7" ]]
+	then 
+		echo Numerosi on liian suuri!
+else
+		echo Numerosi on liian pieni!
+		
+fi
