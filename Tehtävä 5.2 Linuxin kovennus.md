@@ -77,7 +77,7 @@ Ja tämäkin ilmestyy listalle.
 
 B)
 
-Aivan aluksi asennamme ClamAV:n seuraavasti: 
+1. Aivan aluksi asennamme ClamAV:n seuraavasti: 
 
 ![clamav](https://user-images.githubusercontent.com/72074501/119165380-19f74c80-ba66-11eb-89c0-f5ce8d809f08.PNG)
 
@@ -89,4 +89,8 @@ sudo tarkoittaa taas root-oikeuksia eli annamme ohjelmalle täydet oikeudet toim
 
 ![One eternity later](https://user-images.githubusercontent.com/72074501/119166402-3e075d80-ba67-11eb-9b8b-9c5ff7bb5a19.jpg)
 
-Scannauksessa meni pitkään, sillä se kävi läpi koko tiedostojärjestelmän. Nyt kuitenkin se on valmis ja tullut lopputulokseen: ei viruksia. 
+Scannauksessa meni pitkään, sillä se kävi läpi koko tiedostojärjestelmän. Nyt kuitenkin se on valmis ja tullut lopputulokseen: ei viruksia.
+
+2. Kovennuslistan vaihe 1: Ajamme päivitykset kirjoittamalla sudo apt update && sudo apt upgrade -y. Tämä etsii päivitykset ja asentaa ne automaattisesti, jos niitä löytyy. Minun tapauksessa niitä ei löytynyt, sillä olin päivittänyt järjestelmäni juuri vähän aikaa sitten. 
+
+Kovennuslistan vaihe 3: 
