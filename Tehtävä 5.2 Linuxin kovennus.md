@@ -103,7 +103,7 @@ Tässä pitää olla varovainen, sillä väärän paketin poistaminen voi harjot
 
 ![remove](https://user-images.githubusercontent.com/72074501/119172305-73fc1000-ba6e-11eb-8940-f7d331bf8a7b.PNG)
 
-Seuraavaksi teemme vielä omavalintaiset kovennukset. Päädyn poistamaan turvattomat protokollat käytöstä (vaihtoehto 5), sillä en koe tarvitsevani niitä tällä koneella.
+3. Seuraavaksi teemme vielä omavalintaiset kovennukset. Päädyn poistamaan turvattomat protokollat käytöstä (vaihtoehto 5), sillä en koe tarvitsevani niitä tällä koneella.
 
 ![Siivousta](https://user-images.githubusercontent.com/72074501/119173104-6f842700-ba6f-11eb-9aa2-68155425c855.PNG)
 
