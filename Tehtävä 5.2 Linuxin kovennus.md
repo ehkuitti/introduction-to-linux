@@ -94,3 +94,23 @@ Scannauksessa meni pitkään, sillä se kävi läpi koko tiedostojärjestelmän.
 2. Kovennuslistan vaihe 1: Ajamme päivitykset kirjoittamalla sudo apt update && sudo apt upgrade -y. Tämä etsii päivitykset ja asentaa ne automaattisesti, jos niitä löytyy. Minun tapauksessa niitä ei löytynyt, sillä olin päivittänyt järjestelmäni juuri vähän aikaa sitten. 
 
 Kovennuslistan vaihe 3: 
+
+Tarkistamme asennetut sovellukset seuravasti: 
+
+![dpkg](https://user-images.githubusercontent.com/72074501/119170149-86c11580-ba6b-11eb-82c5-40702c1047d0.PNG)
+
+Tässä pitää olla varovainen, sillä väärän paketin poistaminen voi harjottaa järjestelmän (root-oikeuksillahan voi tehdä mitä vain, myös järjestelmälle haitallisia asioita). Tunnistan kuitenkin ohjelmista gparted-osiointiohjelman, joten päädyn poistamaan sen, sillä en tarvitse sitä tällä koneella. Tämän lisäksi päädyn poistamaan itse asentamani VLC-mediasoittimen sekä Gedit-tekstinkäsittelyohjelman. 
+
+![remove](https://user-images.githubusercontent.com/72074501/119172305-73fc1000-ba6e-11eb-8940-f7d331bf8a7b.PNG)
+
+Seuraavaksi teemme vielä omavalintaiset kovennukset. Päädyn poistamaan turvattomat protokollat käytöstä (vaihtoehto 5), sillä en koe tarvitsevani niitä tällä koneella.
+
+![Siivousta](https://user-images.githubusercontent.com/72074501/119173104-6f842700-ba6f-11eb-9aa2-68155425c855.PNG)
+
+Toisena valinnaisena kovennusmetodina teen tietoturvatarkistuksen Lyniksellä (vaihtoehto 6). Lynis oli näköjään valmiiksi asennettu versiossani, joten sitä ei tarvitse asentaa erikseen. Nyt teemme sitten vain auditoinnin seuraavalla komennolla: 
+
+![Lynis](https://user-images.githubusercontent.com/72074501/119173291-be31c100-ba6f-11eb-9063-c5f6a7964068.PNG)
+
+Komento ei kuitenkaan anna täysiä tuloksia, sillä olen ajanut sen itsenäni enkä roottina. Siispä kokeilemme sudon kanssa ja nyt auditointi onnistuu kokonaisuudessaan. Saamme auditoinnista seuraavat tulokset: 
+
+![Raportti](https://user-images.githubusercontent.com/72074501/119173915-955dfb80-ba70-11eb-9c03-ba2f4cca3334.PNG)
