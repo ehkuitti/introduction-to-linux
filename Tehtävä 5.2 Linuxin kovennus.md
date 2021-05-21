@@ -74,3 +74,19 @@ Nyt voimme painaa Add alhaalta.
 Ja tämäkin ilmestyy listalle.
 
 ![Listanen](https://user-images.githubusercontent.com/72074501/119164790-70b05680-ba65-11eb-8e3e-419c2874f570.PNG)
+
+B)
+
+Aivan aluksi asennamme ClamAV:n seuraavasti: 
+
+![clamav](https://user-images.githubusercontent.com/72074501/119165380-19f74c80-ba66-11eb-89c0-f5ce8d809f08.PNG)
+
+Nyt ClamAV on valmiina käytettäväksi. Paketista löytyy clamscan toiminto, jota voi ajaa komentorivillä seuraavasti: 
+
+![clam](https://user-images.githubusercontent.com/72074501/119166037-d51fe580-ba66-11eb-9bd1-5d5355bb390a.PNG)
+
+sudo tarkoittaa taas root-oikeuksia eli annamme ohjelmalle täydet oikeudet toimia järjestelmässä. Tämän jälkeen kirjoitamme clamscan, mikä on ohjelman mukana tuleva scannauskomento. Käytämme valitsinta -r listaamaan scannatut tiedostot ja asetamme kohteeksi tiedostojärjestelmän juuren "/". Enterillä ja salasanan annolla scannaus alkaa. 
+
+![One eternity later](https://user-images.githubusercontent.com/72074501/119166402-3e075d80-ba67-11eb-9b8b-9c5ff7bb5a19.jpg)
+
+Scannauksessa meni pitkään, sillä se kävi läpi koko tiedostojärjestelmän. Nyt kuitenkin se on valmis ja tullut lopputulokseen: ei viruksia. 
