@@ -18,7 +18,9 @@ Nyt voimme palata Passwordssiin. Tämän jälkeen klikkaamme luotujen käyttäji
 ![Johnny](https://user-images.githubusercontent.com/72074501/119229562-4c19b480-bb21-11eb-80aa-09f35b36e5c5.PNG)
 Kuva: Attack käynnissä. 
 
-Aikaa kuluu noin viitisen minuuttia ja lopulta kaikki kolme salasanaa on onnistuttu murtamaan. 
+Virtuaalikoneeni (itse asennettu levykuvasta, annettu AMD FX-8350 prosessorilta 4 ydintä ja 6 gigaa ramia, SSD) sai heikon salasanan murrettua alle todella nopeasti, alle minuutissa. Keskitason salasanan, jossa oli iso alkukirjain ja yhteensä 4 kirjainta se ratkaisi noin puolessa tunnissa. Vahvaa salasanaa en saanut edes murrettua samassa illassa. Olen hieman yllättynyt, kuinka paljon turvallisemmaksi kirjainten kirjainkoon muuttelu sekä erikoismerkkien lisääminen salasanasta tekee. Vaikken siis päässytkään toivottuun 3/3 lopputulokseen, opin myös samalla paljon tärkeää tietoa salasanaturvallisuudesta.
+
+![Vahva](https://user-images.githubusercontent.com/72074501/119232935-8a1dd500-bb2f-11eb-9866-5612883c520e.PNG)
 
 B) 
 
