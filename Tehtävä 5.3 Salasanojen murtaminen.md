@@ -28,4 +28,26 @@ B)
 
 ![CrackStationi](https://user-images.githubusercontent.com/72074501/119230135-92701300-bb23-11eb-82c4-d3f50eacb555.PNG)
 
-2. 
+2. Aivan aluksi asennamme Geditin komennolla _sudo apt install gedit_. Tämä siksi, että tarvitsemme tekstieditorin, johon kopioida Canvasissa annetut MD5-hashit. Kun tämä on tehty, avaamme Geditin kirjoittamalla terminaaliin komennon _gedit_. Tämän jälkeen hashit liitetään tiedostoon. Tallennamme tiedoston työpöydälle nimellä testmd5.txt...
+
+![Gedit](https://user-images.githubusercontent.com/72074501/119233344-37451d00-bb31-11eb-89a9-e244b576162d.PNG)
+
+... ja suljemme geditin. 
+
+Olen tallentanut kaiken tarvittavan eetu-käyttäjäni työpöydälle. Seuraavaksi avataan terminal. Käytämme John The Ripper ohjelmaa salasanan murtamiseen, joten ajamme seuraavan komennon: 
+
+- vaihdetaan hakemistoksi (Change Directory) työpöytä
+
+sudo john -w=/home/eetu/Desktop/finnish-unknown.txt --format=raw-md5 "/home/eetu/Desktop/testmd5.txt"
+
+, jossa
+
+- sudo tarkoittaa root-oikeuksia
+- john viittaa itse ohjelmaan
+- -w valitsimella paikannamme sanalistan
+- --format=raw-md5:llä kerromme, että sen formaatti on md5
+- testmd5.txt on tiedosto, työpöydällä
+
+Kuluu alle minuutti ja ohjelma on valmis. Saamme seuraavat tulokset: 
+
+![Joni](https://user-images.githubusercontent.com/72074501/119233595-893a7280-bb32-11eb-8cc3-1480c9f98fc7.PNG)
