@@ -36,8 +36,6 @@ B)
 
 Olen tallentanut kaiken tarvittavan eetu-käyttäjäni työpöydälle. Seuraavaksi avataan terminal. Käytämme John The Ripper ohjelmaa salasanan murtamiseen, joten ajamme seuraavan komennon: 
 
-- vaihdetaan hakemistoksi (Change Directory) työpöytä
-
 sudo john -w=/home/eetu/Desktop/finnish-unknown.txt --format=raw-md5 "/home/eetu/Desktop/testmd5.txt"
 
 , jossa
