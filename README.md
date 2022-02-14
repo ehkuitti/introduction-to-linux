@@ -1,4 +1,4 @@
-# johdatus-linuxiin
+# Johdatus Linuxiin
 
 Tämä repo on Laureassa suorittamani Johdatus Linuxiin -kurssin tehtäväpalautusarkisto.
 
