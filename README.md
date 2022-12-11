@@ -1,6 +1,6 @@
 # Introduction to Linux
 
-Please note: The materials in this repo are primarily in Finnish as it was the language of instruction on this course. However, there are screenshots within the text for clarification.
+_Please note: The materials in this repo are primarily in Finnish as it was the language of instruction on this course. However, there are screenshots within the text for clarification._
 
 This repo is the assignment submission archive for the Introduction to Linux course I completed at Laurea University of Applied Sciences.
 
