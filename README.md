@@ -1,5 +1,7 @@
 # Introduction to Linux
 
+Please note: The materials in this repo are primarily in Finnish as it was the language of instruction on this course. However, there are screenshots within the text for clarification.
+
 This repo is the assignment submission archive for the Introduction to Linux course I completed at Laurea University of Applied Sciences.
 
 On this course, we learned to use Linux in a virtual machine using a prepackaged disk image in VirtualBox. The course materials covered the basics of using Linux: 
