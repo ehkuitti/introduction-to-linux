@@ -1,4 +1,4 @@
-# introduction to linux
+# Introduction to Linux
 
 This repo is the assignment submission archive for the Introduction to Linux course I completed at Laurea University of Applied Sciences.
 
